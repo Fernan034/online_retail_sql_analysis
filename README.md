@@ -23,14 +23,13 @@ Country	Country where the customer resides
 
 ⚙️ Tools Used
 MySQL Workbench
-
 SQL
 
 Dataset Source: Kaggle
 
 🧪 Sample SQL Queries
-1. Subquery: Products Above Average Price
-2. 
+Subquery: Products Above Average Price
+
 SELECT InvoiceNo, Description, Quantity, UnitPrice
 FROM online_retail
 WHERE UnitPrice > (
@@ -41,7 +40,7 @@ LIMIT 10;
 
 This query lists products sold above the average unit price.
 
-4. Top 5 Countries by Number of Transactions
+ Top 5 Countries by Number of Transactions
 
 SELECT Country, COUNT(DISTINCT InvoiceNo) AS Total_Transactions
 FROM online_retail
@@ -51,7 +50,7 @@ LIMIT 5;
 
 Shows which countries have the most customer transactions.
 
-5. Total Revenue by Product
+ Total Revenue by Product
 
 SELECT Description, SUM(UnitPrice * Quantity) AS Total_Revenue
 FROM online_retail
